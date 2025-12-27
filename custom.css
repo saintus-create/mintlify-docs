@@ -24,3 +24,36 @@ textarea,
 select {
   border-radius: 0 !important;
 }
+
+/* Custom Navbar Styling */
+#navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Custom Footer */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111;
+  padding: 4rem 2rem;
+}
+
+/* Enhanced Buttons - keeping the square look but adding interaction */
+.button,
+a[role="button"] {
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.button:hover,
+a[role="button"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Callouts */
+.callout {
+  border-left-width: 4px;
+  border-radius: 0;
+}
