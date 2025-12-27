@@ -1,49 +1,43 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "venus",
   "name": "Theory",
   "colors": {
-    "primary": "#000000",
-    "light": "#000000",
-    "dark": "#000000"
+    "primary": "#FFFFFF",
+    "light": "#1A1A1A",
+    "dark": "#FFFFFF",
+    "background": {
+      "light": "#FAFAFA",
+      "dark": "#0A0A0A"
+    }
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
-      "dropdowns": [
-        {
-          "dropdown": "Untitled Dropdown",
-          "href": "https://mintlify.com"
-        }
-      ],
       "anchors": [
         {
           "anchor": "Critical Theory",
-          "icon": "lightbulb",
-          "color": {
-            "light": "#ffffff",
-            "dark": "#ffffff"
-          },
+          "icon": "bolt",
           "href": "/resources/overview"
         },
         {
           "anchor": "Documentation",
-          "icon": "book-open-cover",
+          "icon": "book",
           "href": "https://mintlify.com/docs"
         },
         {
           "anchor": "Blog",
-          "icon": "newspaper",
+          "icon": "pen-nib",
           "href": "https://mintlify.com/blog"
         }
       ]
     },
     "tabs": [
       {
-        "tab": "TEST***",
+        "tab": "Overview",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Start",
             "pages": [
               "index"
             ]
@@ -54,7 +48,7 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
@@ -69,7 +63,7 @@
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Writing Content",
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -78,7 +72,7 @@
             ]
           },
           {
-            "group": "AI tools",
+            "group": "AI Tools",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
@@ -87,7 +81,6 @@
           },
           {
             "group": "Resources",
-            "icon": "lightbulb",
             "pages": [
               "resources/overview"
             ]
@@ -95,16 +88,16 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Reference",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Endpoints",
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -137,10 +130,7 @@
     "options": [
       "copy",
       "view",
-      "chatgpt",
       "claude",
-      "perplexity",
-      "mcp",
       "cursor",
       "vscode"
     ]
@@ -153,14 +143,30 @@
     }
   },
   "fonts": {
-    "family": "SF Pro Compact",
-    "weight": 300
+    "heading": {
+      "family": "Inter",
+      "weight": 600
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
+  },
+  "appearance": {
+    "default": "dark"
   },
   "background": {
-    "decoration": "grid"
+    "decoration": "none"
   },
   "styling": {
     "eyebrows": "breadcrumbs",
+    "codeblocks": "system",
     "latex": true
+  },
+  "rounded": "none",
+  "seo": {
+    "metatags": {
+      "theme-color": "#000000"
+    }
   }
 }
