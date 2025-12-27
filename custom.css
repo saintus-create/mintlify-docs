@@ -1,0 +1,37 @@
+/* custom.css */
+
+/* Sharp corners everywhere */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+/* Dark code blocks */
+pre {
+  background: #000 !important;
+  border: 1px solid #1a1a1a !important;
+}
+
+/* Sharp buttons */
+button,
+a[role="button"],
+.button {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Sharp cards and containers */
+[class*="card"],
+[class*="Card"] {
+  border-radius: 0 !important;
+}
+
+/* Sharp inputs */
+input,
+textarea,
+select {
+  border-radius: 0 !important;
+}
