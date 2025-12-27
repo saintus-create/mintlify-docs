@@ -3,28 +3,30 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#000000",
-    "light": "#000000",
-    "dark": "#000000"
+    "primary": "#0D9373",
+    "light": "#ffffff",
+    "dark": "#1a1a1a"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
       "dropdowns": [
         {
-          "dropdown": "Untitled Dropdown",
-          "href": "https://mintlify.com"
+          "dropdown": "Resources",
+          "label": "Resources",
+          "items": [
+            { "label": "Docs Home", "href": "/" },
+            { "label": "API Reference", "href": "/api-reference/introduction" },
+            { "label": "GitHub", "href": "https://github.com/mintlify" }
+          ]
         }
       ],
       "anchors": [
         {
           "anchor": "Critical Theory",
           "icon": "lightbulb",
-          "color": {
-            "light": "#ffffff",
-            "dark": "#ffffff"
-          },
-          "href": ""
+          "color": { "light": "#ffffff", "dark": "#ffffff" },
+          "href": "/critical-theory"
         },
         {
           "anchor": "Documentation",
@@ -40,10 +42,12 @@
     },
     "tabs": [
       {
-        "tab": "TEST***",
+        "tab": "Products",
         "products": [
           {
-            "product": "Untitled Product"
+            "product": "Demo Product",
+            "href": "https://example.com/product",
+            "description": "A quick demo product"
           }
         ]
       },
@@ -52,18 +56,11 @@
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
+            "pages": ["index", "quickstart", "development"]
           },
           {
             "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
+            "pages": ["essentials/settings", "essentials/navigation"]
           },
           {
             "group": "Writing content",
@@ -85,9 +82,7 @@
           {
             "group": "Resources",
             "icon": "lightbulb",
-            "pages": [
-              "resources/overview"
-            ]
+            "pages": ["resources/overview"]
           }
         ]
       },
@@ -96,9 +91,7 @@
         "groups": [
           {
             "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           },
           {
             "group": "Endpoint examples",
@@ -122,6 +115,10 @@
       {
         "label": "Support",
         "href": "mailto:hi@mintlify.com"
+      },
+      {
+        "label": "Home",
+        "href": "/"
       }
     ],
     "primary": {
@@ -132,15 +129,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
@@ -150,7 +147,7 @@
     }
   },
   "fonts": {
-    "family": "SF Pro Compact",
+    "family": "SF Pro Compact, Helvetica Neue, Arial, sans-serif",
     "weight": 300
   }
 }
