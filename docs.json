@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "Theory",
   "colors": {
     "primary": "#000000",
     "light": "#000000",
@@ -155,5 +155,12 @@
   "fonts": {
     "family": "SF Pro Compact",
     "weight": 300
+  },
+  "background": {
+    "decoration": "grid"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs",
+    "latex": true
   }
 }
