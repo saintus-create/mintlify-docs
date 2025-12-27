@@ -10,7 +10,22 @@
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
+      "dropdowns": [
+        {
+          "dropdown": "Untitled Dropdown",
+          "href": "https://mintlify.com"
+        }
+      ],
       "anchors": [
+        {
+          "anchor": "Critical Theory",
+          "icon": "lightbulb",
+          "color": {
+            "light": "#ffffff",
+            "dark": "#ffffff"
+          },
+          "href": ""
+        },
         {
           "anchor": "Documentation",
           "icon": "book-open-cover",
@@ -25,7 +40,12 @@
     },
     "tabs": [
       {
-        "tab": "TEST***"
+        "tab": "TEST***",
+        "products": [
+          {
+            "product": "Untitled Product"
+          }
+        ]
       },
       {
         "tab": "Guides",
