@@ -2,6 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "venus",
   "name": "Theory",
+  "css": "/custom.css",
   "colors": {
     "primary": "#FFFFFF",
     "light": "#1A1A1A",
@@ -11,6 +12,7 @@
       "dark": "#0A0A0A"
     }
   },
+  "rounded": "none",
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
@@ -162,11 +164,5 @@
     "eyebrows": "breadcrumbs",
     "codeblocks": "system",
     "latex": true
-  },
-  "rounded": "none",
-  "seo": {
-    "metatags": {
-      "theme-color": "#000000"
-    }
   }
 }
