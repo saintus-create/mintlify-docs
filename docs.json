@@ -2,35 +2,29 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Mint Starter Kit",
-  "description": "Documentation site for the Mint Starter Kit",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#ffffff",
-    "dark": "#1a1a1a"
+    "primary": "#000000",
+    "light": "#000000",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navigation": {
     "global": {
       "dropdowns": [
         {
-          "label": "Resources",
-          "items": [
-            { "label": "Docs Home", "href": "/" },
-            { "label": "API Reference", "href": "/api-reference/introduction" },
-            { "label": "GitHub", "href": "https://github.com/mintlify" }
-          ]
+          "dropdown": "Untitled Dropdown",
+          "href": "https://mintlify.com"
         }
       ],
       "anchors": [
         {
           "anchor": "Critical Theory",
           "icon": "lightbulb",
-          "color": "#ffffff",
-          "href": "/critical-theory"
+          "color": {
+            "light": "#ffffff",
+            "dark": "#ffffff"
+          },
+          "href": "/resources/overview"
         },
         {
           "anchor": "Documentation",
@@ -46,18 +40,36 @@
     },
     "tabs": [
       {
-        "label": "Guides",
+        "tab": "TEST***",
         "groups": [
           {
-            "label": "Getting Started",
-            "pages": ["index", "quickstart", "development"]
+            "group": "Overview",
+            "pages": [
+              "index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart",
+              "development"
+            ]
           },
           {
-            "label": "Customization",
-            "pages": ["essentials/settings", "essentials/navigation"]
+            "group": "Customization",
+            "pages": [
+              "essentials/settings",
+              "essentials/navigation"
+            ]
           },
           {
-            "label": "Writing Content",
+            "group": "Writing content",
             "pages": [
               "essentials/markdown",
               "essentials/code",
@@ -66,7 +78,7 @@
             ]
           },
           {
-            "label": "AI Tools",
+            "group": "AI tools",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
@@ -74,21 +86,25 @@
             ]
           },
           {
-            "label": "Resources",
+            "group": "Resources",
             "icon": "lightbulb",
-            "pages": ["resources/overview"]
+            "pages": [
+              "resources/overview"
+            ]
           }
         ]
       },
       {
-        "label": "API Reference",
+        "tab": "API reference",
         "groups": [
           {
-            "label": "API Documentation",
-            "pages": ["api-reference/introduction"]
+            "group": "API documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
           },
           {
-            "label": "Endpoint Examples",
+            "group": "Endpoint examples",
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
@@ -100,16 +116,21 @@
       }
     ]
   },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navbar": {
     "links": [
-      { "label": "Support", "href": "mailto:hi@mintlify.com" },
-      { "label": "Home", "href": "/" }
+      {
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
+      }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com",
-      "target": "_blank"
+      "href": "https://dashboard.mintlify.com"
     }
   },
   "contextual": {
@@ -130,5 +151,9 @@
       "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "fonts": {
+    "family": "SF Pro Compact",
+    "weight": 300
   }
 }
