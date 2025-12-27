@@ -3,14 +3,10 @@
 *::after {
   border-radius: 0 !important;
 }
-
-/* Dark code blocks */
 pre {
   background: #000 !important;
   border: 1px solid #1a1a1a !important;
 }
-
-/* Sharp buttons */
 button,
 a[role="button"],
 .button {
@@ -19,14 +15,10 @@ a[role="button"],
   letter-spacing: 0.05em;
   font-weight: 500;
 }
-
-/* Sharp cards and containers */
 [class*="card"],
 [class*="Card"] {
   border-radius: 0 !important;
 }
-
-/* Sharp inputs */
 input,
 textarea,
 select {
