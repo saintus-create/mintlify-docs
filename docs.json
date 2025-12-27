@@ -9,6 +9,15 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "dropdowns": [
+      {
+        "dropdown": "Resources",
+        "icon": "lightbulb",
+        "pages": [
+          "resources/overview"
+        ]
+      }
+    ],
     "tabs": [
       {
         "tab": "Guides",
