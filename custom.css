@@ -24,8 +24,9 @@
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
 
-  /* PRIMARY (Brand/Action) */
-  --primary: 240 5.9% 10%;
+  /* PRIMARY (Brand/Action) - MONOCHROME */
+  /* Light Mode: Primary is Black */
+  --primary: 0 0% 9%;
   --primary-foreground: 0 0% 98%;
 
   /* SECONDARY (Alternative actions) */
@@ -36,48 +37,49 @@
   --accent: 240 4.8% 95.9%;
   --accent-foreground: 240 5.9% 10%;
 
-  /* DESTRUCTIVE */
+  /* DESTRUCTIVE - Keeping standard red for errors, or do we want monochrome here too? 
+     Standard Shadcn keeps it red for semantics, but let's mute it slightly. */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  /* RING (Focus states) */
+  /* RING (Focus states) - Monochrome */
   --ring: 240 5% 64.9%;
 
   /* RADIUS */
   --radius: 0.5rem; /* Standard Shadcn Radius */
 }
 
-/* DARK MODE OVERRIDES (Simulated since Mintlify handles its own dark mode toggling) */
-/* Ideally, Mintlify adds a 'dark' class to html/body. We map these for when that happens. */
+/* DARK MODE OVERRIDES */
 .dark, [data-theme="dark"] {
-  --background: 240 10% 3.9%;
+  --background: 0 0% 3.9%; /* Pure deep black/gray */
   --foreground: 0 0% 98%;
   
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
   
-  --card: 240 10% 3.9%;
+  --card: 0 0% 3.9%;
   --card-foreground: 0 0% 98%;
   
-  --popover: 240 10% 3.9%;
+  --popover: 0 0% 3.9%;
   --popover-foreground: 0 0% 98%;
   
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
+  --border: 0 0% 14.9%;
+  --input: 0 0% 14.9%;
   
+  /* Dark Mode: Primary becomes White (White on Black) */
   --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
+  --primary-foreground: 0 0% 9%;
   
-  --secondary: 240 3.7% 15.9%;
+  --secondary: 0 0% 14.9%;
   --secondary-foreground: 0 0% 98%;
   
-  --accent: 240 3.7% 15.9%;
+  --accent: 0 0% 14.9%;
   --accent-foreground: 0 0% 98%;
   
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
   
-  --ring: 240 4.9% 83.9%;
+  --ring: 0 0% 83.1%;
 }
 
 
@@ -87,9 +89,14 @@
 
 /* Navbar */
 #navbar {
-  background: hsl(var(--background) / 0.8) !important;
+  /* Using background-color logic with transparency */
+  background-color: hsl(var(--background)) !important; 
+  background-color: hsla(var(--background), 0.9) !important;
+  background: hsl(var(--background) / 0.9) !important;
+
   border-bottom: 1px solid hsl(var(--border));
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  z-index: 50; 
 }
 
 /* Footer */
@@ -107,14 +114,15 @@ footer {
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Default button look mapped to Secondary/Accent logic if no specific class */
-  background-color: hsl(var(--secondary));
-  color: hsl(var(--secondary-foreground));
+  /* Monochrome: Primary buttons use --primary (Black in light, White in dark) */
+  /* Default Mintlify buttons might rely on specific classes, but we map the generic one here */
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .button:hover, a[role="button"]:hover {
-  background-color: hsl(var(--accent));
-  color: hsl(var(--accent-foreground));
+  /* Opacity change for hover on monochrome */
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 

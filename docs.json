@@ -4,8 +4,8 @@
   "name": "Theory",
   "css": "/custom.css",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#000000",
+    "primary": "#000000",
+    "light": "#202020", 
     "dark": "#FFFFFF"
   },
   "rounded": "none",
