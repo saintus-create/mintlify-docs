@@ -89,19 +89,21 @@
 
 /* Navbar */
 #navbar {
-  /* Using background-color logic with transparency */
-  background-color: hsl(var(--background)) !important; 
-  background-color: hsla(var(--background), 0.9) !important;
-  background: hsl(var(--background) / 0.9) !important;
-
-  border-bottom: 1px solid hsl(var(--border));
-  backdrop-filter: blur(8px);
+  /* Fix "Two Layers": Ensure background works for the whole block */
+  background-color: hsl(var(--background)) !important;
+  
+  /* Remove internal borders that might split the header rows */
+  border-bottom: 1px solid hsl(var(--border)) !important;
+  
+  /* Remove blur if it emphasizes the split */
+  backdrop-filter: none !important;
   z-index: 50; 
 }
 
 /* Footer */
 footer {
-  background: hsl(var(--muted));
+  /* Strict White/Black Look: No gray background */
+  background: transparent !important;
   border-top: 1px solid hsl(var(--border));
   color: hsl(var(--muted-foreground));
   padding: 4rem 2rem;
@@ -110,19 +112,17 @@ footer {
 /* Buttons */
 .button, a[role="button"] {
   border-radius: var(--radius) !important;
-  border: 1px solid transparent;
+  border: 1px solid hsl(var(--border));
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Monochrome: Primary buttons use --primary (Black in light, White in dark) */
-  /* Default Mintlify buttons might rely on specific classes, but we map the generic one here */
+  /* Monochrome High Contrast */
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
 }
 
 .button:hover, a[role="button"]:hover {
-  /* Opacity change for hover on monochrome */
-  opacity: 0.9;
+  opacity: 0.8;
   transform: translateY(-1px);
 }
 
@@ -134,11 +134,18 @@ input, textarea, select {
   color: hsl(var(--foreground));
 }
 
-/* Cards */
+/* Cards - Fix "Double Bounding Box" */
 [class*="card"], [class*="Card"] {
   border-radius: var(--radius) !important;
-  border: 1px solid hsl(var(--border));
-  background-color: hsl(var(--card));
+  
+  /* Force single border pixel */
+  border: 1px solid hsl(var(--border)) !important;
+  
+  /* Remove shadow to prevent "double box" look */
+  box-shadow: none !important;
+  
+  /* Remove gray fill for strict wireframe look */
+  background-color: transparent !important;
   color: hsl(var(--card-foreground));
 }
 
